@@ -10,6 +10,216 @@
        <br/>
         <div class="container">
             <h1>Placements</h1>
+
+            <ng-template #content let-c="close" let-d="dismiss">
+                  <div *ngIf="chooseAreaAndCarePackage">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="modal-basic-title">Choose area and care package</h4>
+                        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Hello, World!</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" 
+                            class="btn btn-primary btn-lg btn-block"
+                            (click)="showLeadProviderAndTime(content)" >Continue</button>
+                      </div>
+                  </div>
+
+                  <div *ngIf="leadProviderAndTime">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="modal-basic-title">Stage 1 - Lead Provider and Response Time</h4>
+                      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="container">
+                      <br/>
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="" (click)="showChooseAreaAndCarePackage(content)">Start</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Stage 1</li>
+                      </ol>
+                    </nav>
+                    </div>
+                    <div class="modal-body">
+                      <p>Hello, World!</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" 
+                          class="btn btn-primary btn-lg btn-block"
+                          (click)="showRankedProviderAndTime(content)" >Continue</button>
+                    </div>
+                  </div>
+
+
+
+                  <div *ngIf="rankedProviderAndTime">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="modal-basic-title">Stage 2 - Ranked Providers and Response Time</h4>
+                      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="container">
+                      <br/>
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a [routerLink]="" (click)="showChooseAreaAndCarePackage(content)">Start</a></li>
+                          <li class="breadcrumb-item"><a [routerLink]="" (click)="showLeadProviderAndTime(content)">Stage 1</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Stage 2</li>
+                        </ol>
+                      </nav>
+                    </div>
+                    <div class="modal-body">
+                      <p>Hello, World!</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" 
+                          class="btn btn-primary btn-lg btn-block"
+                          (click)="showAllAccreditedProviderAndTime(content)" >Continue</button>
+                    </div>
+                  </div>
+
+
+
+                  <div *ngIf="allAccreditedProviderAndTime">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="modal-basic-title">Stage 3 - All Accredited Providers and Response Time</h4>
+                      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="container">
+                      <br/>
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a [routerLink]="" (click)="showChooseAreaAndCarePackage(content)">Start</a></li>
+                          <li class="breadcrumb-item"><a [routerLink]="" (click)="showLeadProviderAndTime(content)">Stage 1</a></li>
+                          <li class="breadcrumb-item"><a [routerLink]="" (click)="showRankedProviderAndTime(content)">Stage 2</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Stage 3</li>
+                        </ol>
+                      </nav>
+                    </div>
+                    <div class="modal-body">
+                      <p>Hello, World!</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" 
+                          class="btn btn-primary btn-lg btn-block"
+                          (click)="showPreviewAll(content)" >Continue</button>
+                    </div>
+                  </div>
+
+
+
+                  <div *ngIf="previewAll">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="modal-basic-title">Preview Placement to be submitted</h4>
+                      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="container">
+                      <br/>
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a [routerLink]="" (click)="showChooseAreaAndCarePackage(content)">Start</a></li>
+                          <li class="breadcrumb-item"><a [routerLink]="" (click)="showLeadProviderAndTime(content)">Stage 1</a></li>
+                          <li class="breadcrumb-item"><a [routerLink]="" (click)="showRankedProviderAndTime(content)">Stage 2</a></li>
+                          <li class="breadcrumb-item"><a [routerLink]="" (click)="showAllAccreditedProviderAndTime(content)">Stage 3</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Preview</li>
+                        </ol>
+                      </nav>
+                    </div>
+                    <div class="modal-body">
+                      <table  class="table">
+                        <thead>
+                          <tr>
+                            <th>Provider</th>
+                            <th>Response Time End</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Lead Provider</td>
+                            <td>04-Jun-2020</td>
+                          </tr>
+                          <tr>
+                            <td>Ranked Providers</td>
+                            <td>10-Jun-2020</td>
+                          </tr>
+                          <tr>
+                            <td>All Accredited Providers</td>
+                            <td>13-Jun-2020</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" 
+                          class="btn btn-primary btn-lg btn-block"
+                          (click)="submitPlacement(content)" >Submit</button>
+                    </div>
+                  </div>
+
+              </ng-template>
+
+              <div class="btn-block pull-right">
+                <button 
+                  class="btn btn-lg btn-outline-primary" 
+                  (click)="startChooseAreaAndCarePackage(content)">
+                  Start new placement
+                </button>  
+              </div>
+
+              <br/>
+
+             
+              <table  class="table">
+                <thead>
+                  <tr>
+                    <th>Area</th>
+                    <th>Provider</th>
+                    <th>Date Placed</th>
+                    <th>Current Stage</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Kent</td>
+                    <td>Good Care Ltd</td>
+                    <td>20-Mar-2020</td>
+                    <td>Stage 2</td>
+                    <td>In progress</td>
+                  </tr>
+                  <tr>
+                    <td>Kent</td>
+                    <td>Good Care Ltd</td>
+                    <td>20-Mar-2020</td>
+                    <td>Stage 2</td>
+                    <td>In progress</td>
+                  </tr>
+                  <tr>
+                    <td>Essex</td>
+                    <td>Carers Ltd</td>
+                    <td>20-Apr-2020</td>
+                    <td>Stage 3</td>
+                    <td>Completed</td>
+                  </tr>
+                  <tr>
+                    <td>Middlesex</td>
+                    <td>Better Care Ltd</td>
+                    <td>20-Mar-2020</td>
+                    <td>Stage 2</td>
+                    <td>In progress</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
     </div>
   </div>

@@ -17,6 +17,7 @@
         class="form-control" 
         id="exampleInputPassword1" 
         name="password" [(ngModel)]="password"
+        (keyup.enter)="handleLogin()"
         placeholder="Password">
     </div>
     <button type="submit" (click)=handleLogin() class="btn btn-primary">Login</button>
