@@ -21,6 +21,18 @@
                       </div>
                       <div class="modal-body">
                         <p>Hello, World!</p>
+                        <div class="form-group">
+                          <label for="area">Area:</label>
+                          <select id="area" class="form-control" [(ngModel)]="selectedArea" required>
+                            <option *ngFor="let area of areas" [ngValue]="area.id">{{area.name}}</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="area">Care Package:</label>
+                          <select id="area" class="form-control" [(ngModel)]="selectedCarePackage" required>
+                            <option *ngFor="let carePackage of carePackages" [ngValue]="carePackage.id">{{carePackage.name}}</option>
+                          </select>
+                        </div>
                       </div>
                       <div class="modal-footer">
                         <button type="button" 
@@ -28,6 +40,8 @@
                             (click)="showLeadProviderAndTime(content)" >Continue</button>
                       </div>
                   </div>
+
+
 
                   <div *ngIf="leadProviderAndTime">
                     <div class="modal-header">
@@ -46,7 +60,21 @@
                     </nav>
                     </div>
                     <div class="modal-body">
-                      <p>Hello, World!</p>
+                      <p>A message or notification will be sent to the Lead Provider to either accept or reject this placement. 
+                        Please select the time deadline by which stage 1 of the placement will end and stage 2 will commence.
+                      </p>
+                      <div class="form-group">
+                        <label for="area">Days:</label>
+                        <select id="selectedLeadProviderResponseDays" class="form-control" [(ngModel)]="selectedLeadProviderResponseDays" required>
+                          <option *ngFor="let day of days" [ngValue]="day">{{day}}</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="area">Hours:</label>
+                        <select id="selectedLeadProviderResponseHours" class="form-control" [(ngModel)]="selectedLeadProviderResponseHours" required>
+                          <option *ngFor="let hour of hours" [ngValue]="hour">{{hour}}</option>
+                        </select>
+                      </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" 
@@ -75,7 +103,21 @@
                       </nav>
                     </div>
                     <div class="modal-body">
-                      <p>Hello, World!</p>
+                      <p>A message or notification will be sent to the Ranked Providers to either accept or reject this placement. 
+                        Please select the time deadline by which stage 2 of the placement will end and stage 3 will commence.
+                      </p>
+                      <div class="form-group">
+                        <label for="area">Days:</label>
+                        <select id="selectedRankedProvidersResponseDays" class="form-control" [(ngModel)]="selectedRankedProvidersResponseDays" required>
+                          <option *ngFor="let day of days" [ngValue]="day">{{day}}</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="area">Hours:</label>
+                        <select id="selectedRankedProvidersResponseHours" class="form-control" [(ngModel)]="selectedRankedProvidersResponseHours" required>
+                          <option *ngFor="let hour of hours" [ngValue]="hour">{{hour}}</option>
+                        </select>
+                      </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" 
@@ -105,7 +147,21 @@
                       </nav>
                     </div>
                     <div class="modal-body">
-                      <p>Hello, World!</p>
+                      <p>A message or notification will be sent to the All Accredited Providers to either accept or reject this placement. 
+                        Please select the time deadline by which stage 3 of the placement will end.
+                      </p>
+                      <div class="form-group">
+                        <label for="area">Days:</label>
+                        <select id="selectedAllAccreditedProvidersResponseDays" class="form-control" [(ngModel)]="selectedAllAccreditedProvidersResponseDays" required>
+                          <option *ngFor="let day of days" [ngValue]="day">{{day}}</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="area">Hours:</label>
+                        <select id="selectedAllAccreditedProvidersResponseHours" class="form-control" [(ngModel)]="selectedAllAccreditedProvidersResponseHours" required>
+                          <option *ngFor="let hour of hours" [ngValue]="hour">{{hour}}</option>
+                        </select>
+                      </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" 
@@ -136,6 +192,24 @@
                       </nav>
                     </div>
                     <div class="modal-body">
+
+                      
+
+                      <table  class="table">
+                        <tbody>
+                          <tr>
+                            <td>Area:</td>
+                            <td>{{selectedArea.name}}</td>
+                          </tr>
+                          <tr>
+                            <td>Care Package:</td>
+                            <td>{{selectedCarePackage.name}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <br/>
+
                       <table  class="table">
                         <thead>
                           <tr>
