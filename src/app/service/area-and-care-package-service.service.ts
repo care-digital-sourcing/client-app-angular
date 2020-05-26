@@ -21,8 +21,10 @@ export class AreaAndCarePackageServiceService {
 
   getAreas(): Area[]{
     return [
-      {id: 1, name:'Essex North'}, 
-      {id: 2, name: 'Essex South'}
+      {id: 1, name: 'Essex North'}, 
+      {id: 2, name: 'Essex South'}, 
+      {id: 3, name: 'Essex West'}, 
+      {id: 4, name: 'Essex East'}
     ];
   }
 
