@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-sm-3">
+        <br/>
+        <app-side-menu selection="providers"></app-side-menu>
+    </div>
+    <div class="col-sm-9">
+       <br/>
+        <div class="container">
+            <h1>Providers</h1>
+            <div class="row">
+                <div class="col-3">
+
+                   
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Provider</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let provider of providers; index as i">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>
+                            {{ provider.name }}
+                            <br/>
+                            {{ provider.address }}
+                            <br/>
+                            {{ provider.postcode }}
+                            <br/>
+                            <ngb-rating [(rate)]="provider.currentRate"></ngb-rating>
+                            <br/>
+
+                        </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+                <div class="col-md-9">
+                    <agm-map [latitude] = "currentLatitude" [longitude] = "currentLongitude">
+
+                    </agm-map>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
