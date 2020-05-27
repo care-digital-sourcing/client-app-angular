@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
-import { AreaAndCarePackageServiceService, Area, CarePackage } from '../service/area-and-care-package-service.service';
+import { AreaAndCarePackageServiceService } from '../service/area-and-care-package-service.service';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -11,10 +11,9 @@ import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 })
 export class PlacementsComponent implements OnInit {
 
-  areas: Area[]
-  carePackages: CarePackage[]
+  areas: string[] //= ["Essex North", "Essex South", "Essex West", "Essex East"]
+  carePackages: string[] //= ["Shopping and Personal Care",  "Personal Care Only"]
 
-  days: number[] = [0,1,2,3,4,5,6,7,8,9,10]
   hours: string[] = [
     "0:00", "0:15", "0:30", "0:45",
     "01:00", "01:15", "01:30", "01:45",
@@ -43,8 +42,8 @@ export class PlacementsComponent implements OnInit {
   ]
 
 
-  selectedArea: Area
-  selectedCarePackage: CarePackage
+  selectedArea: string
+  selectedCarePackage: string
   errorMessageSelectedAreaAndCarePackage: boolean
 
   selectedLeadProviderResponseDay: NgbDateStruct
@@ -154,10 +153,10 @@ export class PlacementsComponent implements OnInit {
       this.allAccreditedProviderAndTime = false
       this.previewAll = true
 
-  }else{
-    this.errorMessageSelectedAllAccreditedProvider = true
-    this.errorMessage = "Please provide the maximum response date and time for an accredited provider to respond"
-  }
+    }else{
+      this.errorMessageSelectedAllAccreditedProvider = true
+      this.errorMessage = "Please provide the maximum response date and time for an accredited provider to respond"
+    }
   }
 
   submitPlacement(content){
