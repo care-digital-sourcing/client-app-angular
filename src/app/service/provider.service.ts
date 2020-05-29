@@ -74,49 +74,49 @@ export class ProviderService {
       postcode: "SS2 1DF", 
       currentRate: 2, 
       iconUrl: "https://img.icons8.com/android/24/000000/home.png", website: "http://website.co.uk",
-      longitude:51.677912, latitude:0.126091}, // longitude:51.677912, latitude:0.126091
+      latitude:51.677912, longitude:0.126091}, // latitude:51.677912, longitude:0.126091
 
       {name: "Papa Care Services Ltd", address: "Papa address", 
       postcode: "SS2 1DF", 
       currentRate: 4, 
       iconUrl: "https://img.icons8.com/android/24/000000/home.png", website: "http://website.co.uk",
-      longitude:51.610676, latitude:0.258065},// longitude:51.610676, latitude:0.258065
+      latitude:51.610676, longitude:0.258065},// latitude:51.610676, longitude:0.258065
 
       {name: "Mama Care Ltd", address: "Mama address", 
       postcode: "IG 1SD", 
       currentRate: 4, 
       iconUrl: "https://img.icons8.com/android/24/000000/home.png", website: "http://website.co.uk",
-      longitude:51.570807, latitude:0.169712},// longitude:51.570807, latitude:0.169712
+      latitude:51.570807, longitude:0.169712},// latitude:51.570807, longitude:0.169712
 
       {name: "Your Care", address: "Your address", 
       postcode: "IG 1SD", 
       currentRate: 6, 
       iconUrl: "https://img.icons8.com/android/24/000000/home.png", website: "http://website.co.uk",
-      longitude:51.570807, latitude:0.169712},// longitude:51.570807, latitude:0.169712
+      latitude:51.570807, longitude:0.169712},// latitude:51.570807, longitude:0.169712
 
       {name: "Declan Care Ltd", address: "my address", 
       postcode: "SS2 1DF", 
       currentRate: 6, 
       iconUrl: "https://img.icons8.com/android/24/000000/home.png", website: "http://website.co.uk",
-      longitude:51.481966, latitude:0.347100},// longitude:51.481966, latitude:0.347100
+      latitude:51.481966, longitude:0.347100},// latitude:51.481966, longitude:0.347100
 
       {name: "Zaza Care Services Ltd", address: "Papa address", 
       postcode: "SS2 1DF", 
       currentRate: 6, 
       iconUrl: "https://img.icons8.com/android/24/000000/home.png", website: "http://website.co.uk",
-      longitude:51.765371, latitude:0.112320},// longitude:51.765371, latitude:0.112320
+      latitude:51.765371, longitude:0.112320},// latitude:51.765371, longitude:0.112320
 
       {name: "Basildon Care Ltd", address: "Mama address", 
       postcode: "IG 1SD", 
       currentRate: 4, 
       iconUrl: "https://img.icons8.com/android/24/000000/home.png", website: "http://website.co.uk",
-      longitude:51.793602, latitude:0.484079},// longitude:51.793602, latitude:0.484079
+      latitude:51.793602, longitude:0.484079},// latitude:51.793602, longitude:0.484079
 
       {name: "Rayleigh Care", address: "Your address", 
       postcode: "IG 1SD", 
       currentRate: 8, 
       iconUrl: "https://img.icons8.com/android/24/000000/home.png", website: "http://website.co.uk",
-      longitude:51.689063,latitude:0.404773}// longitude:51.689063,latitude:0.404773
+      latitude:51.689063, longitude:0.404773}// longitude:51.689063, latitude:0.404773
     ]
   }
 }

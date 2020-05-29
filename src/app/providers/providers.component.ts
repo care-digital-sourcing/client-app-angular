@@ -13,8 +13,8 @@ export class ProvidersComponent implements OnInit {
 
   providers: Provider[] = this.providerService.getProviders()
 
-  currentLatitude: number = 0.126091;
-  currentLongitude: number= 51.677912;
+  currentLatitude: number = this.providers[0].latitude;
+  currentLongitude: number= this.providers[0].longitude;
   address = 'dortmund';
   location: Location;
   loading: boolean;
