@@ -8,7 +8,7 @@
         <div class="container">
             <h1>Providers</h1>
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 tableHeight">
 
                    
                     <table class="table table-striped">
@@ -22,7 +22,8 @@
                         <tr *ngFor="let provider of providers; index as i">
                         <th scope="row">{{ i + 1 }}</th>
                         <td>
-                            {{ provider.name }}
+                            
+                            <a [routerLink]="" (click)="showInMap(provider.name);">{{ provider.name }}</a>
                             <br/>
                             {{ provider.address }}
                             <br/>
@@ -39,8 +40,25 @@
 
                 </div>
                 <div class="col-md-9">
-                    <agm-map [latitude] = "currentLatitude" [longitude] = "currentLongitude">
-
+                    <p *ngIf="loading">Loading...</p>
+                    <agm-map 
+                        [zoom] = "12"
+                        [mapTypeId]="'roadmap'"
+                        [disableDefaultUI]="false"
+                        [latitude] = "currentLatitude" 
+                        [longitude] = "currentLongitude">
+                        <agm-marker *ngFor="let provider of providers; let i = index" 
+                            [latitude]="provider.latitude" 
+                            [longitude]="provider.longitude" 
+                            [iconUrl]="provider.iconUrl"
+                            [label]="provider.name">
+                            <agm-info-window>
+                                <h4>{{provider.name}}</h4>
+                                <p>{{provider.address}}
+                                <br/>{{provider.postcode}}</p>
+                                <a routerLink="{{ provider.website }}">More details</a>
+                            </agm-info-window>
+                        </agm-marker>
                     </agm-map>
                 </div>
             </div>
